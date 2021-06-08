@@ -1,0 +1,56 @@
+header{
+    height: 200px; background-color :cadetblue;
+    position: relative;
+  }
+.shopping-mall{
+    position: absolute;
+    bottom: 20px; left: 10px;
+    font-variant: small-caps;
+}
+.shopping-mall> h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50xp;
+    color: white;
+    letter-spacing: 0.3px;
+    text-shadow: 2px 2px 2px black;
+    border-bottom: 1px dotted grey;
+    padding-bottom: 0;
+    margin: 0;
+}
+.shopping-mall >h5{
+    margin-top: 5px;
+    letter-spacing: 0.5px;
+}
+  nav.row{
+    height: 60px; background-color: yellow;
+  }
+  footer{
+    height: 50px; background-color: grey;
+  }
+  .row > article{
+    min-height: 300px; background-color: darkgrey;
+  }
+  .row > aside{
+    min-height: 300px; background-color: cyan;
+    min-width: none;
+  }
+  .card-header{
+      background-color: lightblue;
+  }
+  ul{
+      box-shadow: lightseagreen;
+  }
+  .list-group-item{
+      background-color: mistyrose;
+
+  }
+  .colors a:hover{
+    background-color: chocolate;
+  }
+  .colors a{
+    font-size:smaller;
+  }
+  .jumbotron{
+    padding: 2rem 1rem;
+    background: cornflowerblue linear-gradient(to right, #9E9AB4, #242134);
+  }

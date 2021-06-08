@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href= "css/bootstrap.min.css">
+    <link rel="stylesheet" href= "css/bootstrap.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app="myapp">
+    <div ng-controller="myctrl">
+    <!--code hiện view, các biểu thức giá trị trong &scope--> 
+    <p ng-repeat="t in nhantu">{{$index + 1}}.{{t}}</p>
+
+    <table class="table table-bordered col-7 mx-auto mt-5">
+        <thead>
+            <tr>
+              <th scope="col"><h4>Username</h4></th>
+              <th scope="col"><h4>Full Name</h4></th>
+              <th scope="col"><h4>Email</h4></th>
+              <th scope="col"><h4>Phái</h4></th>
+              <th scope="col"><h4>Passwword</h4></th>
+              <th scope="col"><h4>Học phí</h4></th>
+            </tr>
+          </thead>
+          <tr ng-repeat="u in users">
+            <td><p>{{u.username}}</p></td> 
+            <td><p>{{u.fullname}}</p></td> 
+            <td><p>{{u.email}}</p></td> 
+            <td><p>{{u.gender}}</p></td>
+            <td><p>{{u.passwword}}</p></td> 
+            <td><p>{{u.schoolfree}}</p></td>
+          </tr>
+      </table>
+    </div>
+</body>
+<script>
+    var app = angular.module("myapp",[]);
+    app.controller("myctrl",myfunc);
+    function myfunc($scope){
+        //code tính toán và gán giá trị biến trong angularjs
+        $scope.nhantu =["Nhường nhịn","Khiêm tốn","Trọng người","Thương vật"];
+        $scope.users =[{
+            "username":"teonv",
+            "passwword":"iloveyou",
+            "fullname":"Nguyễn Văn Tèo",
+            "email":"teonv@fpt.edu.vn",
+            "gender":"true",
+            "birthday":"2020-12-21",
+            "schoolfree":"1500000",
+            "marks":"0"
+        },
+        {
+            "username":"pheonv",
+            "passwword":"iloveyou",
+            "fullname":"Nguyễn Văn Chí Phèo",
+            "email":"teonv@fpt.edu.vn",
+            "gender":"true",
+            "birthday":"2020-12-21",
+            "schoolfree":"2500000",
+            "marks":"0"
+        },
+        {
+            "username":"nopt",
+            "passwword":"iloveyou",
+            "fullname":"Phạm Thị Nở",
+            "email":"nopt@fpt.edu.vn",
+            "gender":"true",
+            "birthday":"2020-12-21",
+            "schoolfree":"2000000",
+            "marks":"0"
+        }];
+        
+    }
+</script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</html>
